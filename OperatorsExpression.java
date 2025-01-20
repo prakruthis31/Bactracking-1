@@ -1,3 +1,5 @@
+import java.util.List;
+
 class Solution {
     List<String> result;
     int targt;
@@ -13,7 +15,9 @@ class Solution {
     private void helper(String num, String path,  Long calc, Long tail,int pivot) {
         // base
         if (pivot == num.length()) {
-            if (calc == targt)
+            if (calc == targt){
+                result.add(path);
+            }
                 return;
         }
         // logic
